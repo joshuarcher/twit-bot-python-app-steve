@@ -31,7 +31,7 @@ class MarkovChain(object):
             sentence_words.append(word1)
             word1, word2 = word2, random.choice(self.dict[(word1, word2)])
         sentence_words.append(word2)
-        return ' '.join(sentence_words)
+        return ' '.join(sentence_words) + "! - Steve Jobs"
 
 
 if __name__ == '__main__':
