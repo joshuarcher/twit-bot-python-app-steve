@@ -1,5 +1,7 @@
 import random
 
+# I couldn't finish this in time so I consulted this website for help:
+# http://agiliq.com/blog/2009/06/generating-pseudo-random-text-with-markov-chains-u/
 
 class MarkovChain(object):
     def __init__(self, list_words):
@@ -31,7 +33,7 @@ class MarkovChain(object):
             sentence_words.append(word1)
             word1, word2 = word2, random.choice(self.dict[(word1, word2)])
         sentence_words.append(word2)
-        return ' '.join(sentence_words) + "! - Steve Jobs"
+        return ' '.join(sentence_words) + "!e - Steve Jobs"
 
 
 if __name__ == '__main__':
